@@ -3,31 +3,29 @@ public interface ListADT<E> {
 
     /**
      * Appends the specified element to the end of this list
+     *
      * @param data
      * @return boolean
      */
-    public boolean add(E data);
+    boolean add(E data);
 
     /**
      * Inserts the specified element at the specified position in this list.
      * Shifts the element currently at that position (if any) and any subsequent
      * elements by adding one to their indices.
+     *
      * @param index - index at which the specified element is to be inserted
-     * @param data - element to be inserted
+     * @param data  - element to be inserted
      * @return boolean
      * @throws IndexOutOfBoundsException - if the index is out of range (index < 0 || index > size())
      */
 
     boolean insert(int index, E data);
 
-            /**
-             * Removes all of the elements from this list
-             *
-             * clear
-             */
 
     /**
      * Returns true if this list contains the specified element
+     *
      * @param data
      * @return boolean
      */
@@ -35,6 +33,7 @@ public interface ListADT<E> {
 
     /**
      * Returns the element at the specified position in this list
+     *
      * @param index
      * @return E
      */
@@ -44,6 +43,7 @@ public interface ListADT<E> {
      * Returns the index of the first occurrence of the specified element in this list
      * Return, or -1 if this list does not
      * contain the element
+     *
      * @param data
      * @return int
      */
@@ -52,6 +52,7 @@ public interface ListADT<E> {
     /**
      * Returns the index of the last matching of the element in this list
      * Return -1 if no match
+     *
      * @param data
      * @return int
      */
@@ -59,13 +60,16 @@ public interface ListADT<E> {
 
     /**
      * Returns true if this list contains no elements
+     *
      * @return boolean
      */
-    boolean isEmpty(E data);
+
+    boolean isEmpty();
 
     /**
      * Removes the  element at the specified position in this list.
      * Shifts any subsequent elements by subtracting one from their indices.
+     *
      * @param index - index of the element to be removed
      * @return E - the element that was removed from the list
      * IndexOutOfBoundsException - if the index is out of range (index < 0 || index >= size())
@@ -80,6 +84,7 @@ public interface ListADT<E> {
 
     /**
      * Returns the number of elements in this list
+     *
      * @return int
      */
     int size();

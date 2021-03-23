@@ -1,54 +1,40 @@
+import java.lang.reflect.Array;
+import java.util.Arrays;
+import java.util.Objects;
+
 public abstract class AbstractListADT<E> implements ListADT<E>{
+    protected E[] mylist;
     protected int size;
+    protected int increment = 2; // default increment
+    protected int capacity;
 
-
-    @Override
-    public boolean add(E data) {
-        return false;
+    protected void initialization(){
+        size = 0;
+        mylist = (E[]) new Object[capacity]; // Create new Array with Default Capacity
     }
 
-    @Override
-    public boolean insert(int index, E data) {
-        return false;
+    public AbstractListADT(){
+        // initialize variables
+        capacity = 10;  // Default Capacity
+        initialization();
+
+        System.out.println("Abstract Class ");
     }
 
-    @Override
-    public boolean contains(E data) {
-        return false;
+
+    public AbstractListADT(int capacity){
+        this.capacity = capacity;
+        initialization();
     }
 
-    @Override
-    public E get(int index) {
-        return null;
-    }
+    public AbstractListADT(int capacity, int increment){
+        this.capacity = capacity;
+        this.increment = increment;
+        initialization();
+    };
 
-    @Override
-    public int indexOf(E data) {
-        return 0;
-    }
 
-    @Override
-    public int lastIndexOf(E data) {
-        return 0;
-    }
 
-    @Override
-    public boolean isEmpty(E data) {
-        return this.size == 0;
-    }
 
-    @Override
-    public E remove(int index) {
-        return null;
-    }
 
-    @Override
-    public E trimToSize(int size) {
-        return null;
-    }
-
-    @Override
-    public int size() {
-        return this.size;
-    }
 }
