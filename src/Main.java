@@ -1,19 +1,16 @@
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
         Vector<Integer> vector = new Vector<Integer>();
-        Integer number = 10;
-        vector.add(number);
-        vector.add(new Integer(20));
-        vector.add(new Integer(20));
-        vector.add(new Integer(20));
-        vector.add(new Integer(20));
-        vector.add(new Integer(20));
-        vector.add(new Integer(20));
-        vector.add(new Integer(20));
-        vector.add(new Integer(20));
-        vector.add(new Integer(20));
-        vector.add(new Integer(20));
 
+        vector.add(120);
+        vector.insert(0, 10);
+
+        System.out.println(Arrays.toString(vector.mylist));
+
+
+        // [10, 20, 20, n, n, n, n, n, n, n]
 
     }
 }
