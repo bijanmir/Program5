@@ -50,6 +50,9 @@ public class Vector<E> extends AbstractListADT<E> {
 
     @Override
     public boolean add(int index, Object data) throws IllegalArgumentException {
+        if (index < 0 || index > numItems)
+            throw new IllegalArgumentException();
+
         if(willBeFull(1)){
             resizeList();
         }
