@@ -17,9 +17,8 @@ public class Main {
         System.out.println(String.format("The size of the vector %d", vector.size()));
         System.out.println(vector.toString());
 
-        vector.remove(1);
 
-        System.out.println(vector.get(2));
+        System.out.println(vector.remove(1));
         System.out.println(String.format("The size of the vector %d", vector.size()));
 
         System.out.println(vector.toString());
