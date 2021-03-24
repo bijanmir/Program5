@@ -81,7 +81,10 @@ public interface ListADT<E> {
      * can use this operation to minimize the storage of a Vector instance.
      *
      * This is test
+     *
+     * This is another test
      */
+
     E trimToSize(int size);
 
     /**
