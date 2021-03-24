@@ -34,7 +34,7 @@ public abstract class AbstractListADT<E> implements ListADT<E>{
 
     public AbstractListADT(){
         initialization();
-
+      
         System.out.println("Initialized From AbstractListADT() ");
     }
 
@@ -49,9 +49,6 @@ public abstract class AbstractListADT<E> implements ListADT<E>{
 
         System.out.println("Initialized From AbstractListADT(int capacity, increment) ");
     };
-
-
-
 
 
 }
