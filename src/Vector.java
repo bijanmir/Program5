@@ -1,7 +1,9 @@
 import java.util.Arrays;
 
-public class Vector<E> extends AbstractListADT {
+public class Vector<E> extends AbstractListADT<E> {
 
+    //TODO: Make sure that your vector grows dynamically. -- Compilation failed
+    //TODO: Test that add(E data) and remove(int index) work correctly. Your outpuT //java.lang.IllegalArgumentException: 1 > 0
 
     private boolean resizeList(){
         capacity *= increment;
@@ -17,6 +19,10 @@ public class Vector<E> extends AbstractListADT {
 
     private boolean willBeFull(int amount){
         return (numItems + amount) >= capacity - 1;
+    }
+
+    public void clear(){
+
     }
 
     @Override
@@ -45,7 +51,7 @@ public class Vector<E> extends AbstractListADT {
     @Override
     public boolean contains(Object data) {
         for(int i = 0; i < numItems; i++){
-            if((E) data == mylist[i]){
+            if(data.equals(mylist[i])){
                 return true;
             }
         }
@@ -58,9 +64,9 @@ public class Vector<E> extends AbstractListADT {
     }
 
     @Override
-    public int indexOf(Object data) {
-        for(int i = 0; i < numItems; i++){
-            if((E) data == mylist[i])
+    public int indexOf(E data) {
+        for(int i = 0; i < size(); i++){
+            if (data.equals(mylist[i]))
                 return i;
         }
         return -1;
@@ -70,7 +76,7 @@ public class Vector<E> extends AbstractListADT {
     public int lastIndexOf(Object data) {
         int index = -1;
         for(int i = numItems - 1; i > 0; --i){
-            if(mylist[numItems] == (E) data){
+            if(data.equals(mylist[i])){
                 index = i;
             }
         }
@@ -87,18 +93,27 @@ public class Vector<E> extends AbstractListADT {
         if(index >= numItems && index < 0)
             return null;
 
+        var removedItem = mylist[index];
+
+        if(index == numItems -1) {
+            mylist[index] = null;
+            numItems--;
+            return removedItem;
+        }
+
         E[] temp = (E[])Arrays.copyOfRange(mylist, index + 1, numItems - 1);
         System.arraycopy(temp, 0, mylist, index, temp.length);
         mylist[numItems - 1] = null;
         numItems--;
-        return (E) mylist;
+
+        return removedItem;
     }
 
     @Override
-    public Object trimToSize(int size) {
+    public E trimToSize(int size) {
         capacity = numItems;
         mylist = Arrays.copyOf(mylist, capacity);
-        return mylist;
+        return (E)mylist;
     }
 
     @Override
@@ -107,7 +122,7 @@ public class Vector<E> extends AbstractListADT {
     }
 
     @Override
-    public void printArray(){
-        System.out.println(Arrays.toString(mylist));
+    public String toString(){
+        return Arrays.toString(mylist);
     }
 }
