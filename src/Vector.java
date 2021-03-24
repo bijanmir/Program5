@@ -95,7 +95,7 @@ public class Vector<E> extends AbstractListADT {
     }
 
     @Override
-    public Object[] trimSize() {
+    public Object trimToSize(int size) {
         capacity = numItems;
         mylist = Arrays.copyOf(mylist, capacity);
         return mylist;
