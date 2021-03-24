@@ -20,7 +20,7 @@ public interface ListADT<E> {
      * @throws IndexOutOfBoundsException - if the index is out of range (index < 0 || index > size())
      */
 
-    boolean insert(int index, E data);
+    boolean add(int index, E data);
 
 
     /**
