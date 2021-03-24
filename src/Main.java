@@ -29,7 +29,7 @@ public class Main {
 
         Integer number = (Integer) vector.get(1);
         System.out.println(String.format("The number picked %d", number));
-        vector.trimSize();
+//        vector.trimTosize(0);
         vector.printArray();
 
     }

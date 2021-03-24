@@ -83,8 +83,8 @@ public class Vector<E> extends AbstractListADT {
     }
 
     @Override
-    public E remove(int index) {
-        if(index < numItems && index > 0)
+    public Object remove(int index) {
+        if(index >= numItems && index < 0)
             return null;
 
         E[] temp = (E[])Arrays.copyOfRange(mylist, index + 1, numItems - 1);
