@@ -26,6 +26,7 @@ public class Main {
 //
 
 
+
 //
 //        vector.insert(1, 25);
 //        System.out.println(String.format("The size of the vector %d", vector.size()));
