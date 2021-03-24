@@ -49,7 +49,7 @@ public class Vector<E> extends AbstractListADT<E> {
 
 
     @Override
-    public boolean add(int index, Object data) {
+    public boolean add(int index, Object data) throws IllegalArgumentException {
         if(willBeFull(1)){
             resizeList();
         }
