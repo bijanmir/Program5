@@ -95,4 +95,6 @@ public interface ListADT<E> {
     int size();
 
     int getIncrement();
+
+
 }

@@ -2,14 +2,8 @@ public class Main {
     public static void main(String[] args) {
         Vector<String> vector = new Vector<String>(3);
 
-        vector.add("YO");
-        vector.add("Ho");
-        vector.add("What");
-        vector.add("Up");
-        vector.add("foo");
-        vector.add("call");
-        vector.add("me");
-        vector.add("me");
+        vector.add("ALPHA");
+        vector.add("BRAVO");;
 
 
 
@@ -19,8 +13,13 @@ public class Main {
 
 
         System.out.println(vector.remove(1));
+        System.out.println(vector.remove(0));
+
         System.out.println(String.format("The size of the vector %d", vector.size()));
 
+        System.out.println(vector.toString());
+
+        vector.clear();
         System.out.println(vector.toString());
 //
 

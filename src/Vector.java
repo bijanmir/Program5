@@ -94,7 +94,7 @@ public class Vector<E> extends AbstractListADT<E> {
         int index = -1;
         for (int i = size - 1; i > 0; --i) {
             if (data.equals(mylist[i])) {
-                index = i;
+                return i;
             }
         }
         return index;
@@ -107,18 +107,22 @@ public class Vector<E> extends AbstractListADT<E> {
 
     @Override
     public E remove(int index) {
+        // CHECKING TO SEE IF VALID INDEX
         if (index >= size && index < 0)
-            return null;
+            throw new IndexOutOfBoundsException();
 
         var removedItem = mylist[index];
 
+        // CHECKING THE LAST INDEX TO SEE IF SO, SET IT TO NULL AND DECREASE SIZE AND RETURN REMOVED ITEM
         if (index == size - 1) {
             mylist[index] = null;
             size--;
             return removedItem;
         }
 
+
         E[] temp = (E[]) Arrays.copyOfRange(mylist, index + 1, size - 1);
+        // COPY TEMP BACK INTO MYLIST STARTING FROM THE INDEX
         System.arraycopy(temp, 0, mylist, index, temp.length);
         mylist[size - 1] = null;
         size--;

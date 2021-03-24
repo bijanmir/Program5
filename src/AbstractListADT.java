@@ -1,15 +1,21 @@
 public abstract class AbstractListADT<E> implements ListADT<E>{
     protected E[] mylist;
     protected int size;
-    protected int increment = 2; // default increment
+    protected int increment = 5; // default increment
     protected int capacity;
     protected String id = "Program 5, Bijan Mirfakhrai";
+
+    public void clear(){
+        E[] temp = (E[]) new Object[capacity];
+        mylist = temp;
+        size = 0;
+    }
 
     public int getCapacity(){
         return capacity;
     }
 
-    public String getId(){
+    public String getID(){
         return id;
     }
 
