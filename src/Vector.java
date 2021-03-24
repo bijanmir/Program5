@@ -79,7 +79,7 @@ public class Vector<E> extends AbstractListADT {
 
     @Override
     public boolean isEmpty() {
-        return (numItems > 0);
+        return (numItems == 0);
     }
 
     @Override
