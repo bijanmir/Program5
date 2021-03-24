@@ -69,7 +69,7 @@ public class Vector<E> extends AbstractListADT {
     @Override
     public int lastIndexOf(Object data) {
         int index = -1;
-        for(int i = numItems - 1; i > numItems; --i){
+        for(int i = numItems - 1; i > 0; --i){
             if(mylist[numItems] == (E) data){
                 index = i;
             }
