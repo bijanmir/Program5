@@ -1,7 +1,8 @@
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
         Vector<Integer> vector = new Vector<Integer>();
-
         vector.add(10);
         vector.add(20);
         vector.add(30);
@@ -31,6 +32,15 @@ public class Main {
         System.out.println(String.format("The number picked %d", number));
         vector.trimSize();
         vector.printArray();
+
+        vector.add(120);
+        vector.insert(0, 10);
+
+        System.out.println(Arrays.toString(vector.mylist));
+
+
+        // [10, 20, 20, n, n, n, n, n, n, n]
+
 
     }
 
