@@ -80,7 +80,7 @@ public interface ListADT<E> {
      * Trims the capacity of this Vector instance to be the list's current size. An application
      * can use this operation to minimize the storage of a Vector instance.
      */
-    E trimToSize(int size);
+    E[] trimSize();
 
     /**
      * Returns the number of elements in this list
@@ -89,4 +89,9 @@ public interface ListADT<E> {
      */
     int size();
 
+
+    /**
+     * Prints Data structure
+     */
+    void printArray();
 }
