@@ -5,6 +5,14 @@ public class Vector<E> extends AbstractListADT<E> {
     //TODO: Make sure that your vector grows dynamically. -- Compilation failed
     //TODO: Test that add(E data) and remove(int index) work correctly. Your outpuT //java.lang.IllegalArgumentException: 1 > 0
 
+    public Vector(int capacity){
+       super(capacity);
+    }
+
+    public Vector(int capacity, int increment){
+        super(capacity, increment);
+    };
+
     private boolean resizeList(){
         capacity *= increment;
 

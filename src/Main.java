@@ -1,16 +1,16 @@
 public class Main {
     public static void main(String[] args) {
-        Vector<Double> vector = new Vector<Double>();
+        Vector<String> vector = new Vector<String>(3);
 
-        vector.add(10.22);
-        vector.add(20.22);
-        vector.add(30.22);
-        vector.add(40.22);
-        vector.add(50.22);
-        vector.add(60.22);
-        vector.add(70.22);
-        vector.add(80.22);
-        vector.add(90.22);
+        vector.add("YO");
+        vector.add("Ho");
+        vector.add("What");
+        vector.add("Up");
+        vector.add("foo");
+        vector.add("call");
+        vector.add("me");
+        vector.add("me");
+
 
 
 
@@ -23,9 +23,8 @@ public class Main {
 
         System.out.println(vector.toString());
 //
-        vector.add(24.22);
 
-        System.out.println(vector.toString());
+
 //
 //        vector.insert(1, 25);
 //        System.out.println(String.format("The size of the vector %d", vector.size()));
