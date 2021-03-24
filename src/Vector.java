@@ -139,6 +139,11 @@ public class Vector<E> extends AbstractListADT<E> {
     }
 
     @Override
+    public int getIncrement() {
+        return increment;
+    }
+
+    @Override
     public String toString() {
         E[] temp = (E[]) new Object[size];
 
@@ -147,4 +152,5 @@ public class Vector<E> extends AbstractListADT<E> {
         }
         return Arrays.toString(temp);
     }
+
 }
