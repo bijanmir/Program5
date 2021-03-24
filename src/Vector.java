@@ -80,7 +80,7 @@ public class Vector<E> extends AbstractListADT<E> {
 
     @Override
     public int indexOf(E data) {
-        for(int i = 0; i < size(); i++){
+        for(int i = 0; i < numItems; i++){
             if (data.equals(mylist[i]))
                 return i;
         }
